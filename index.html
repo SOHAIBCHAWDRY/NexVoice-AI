@@ -192,6 +192,47 @@ table.ct tbody td:first-child{color:var(--text);font-weight:500}
 .cx{color:#444;font-size:.9rem}
 .why-btn{text-align:center;margin-top:2.5rem}
 
+
+
+/* OUR WORK */
+.work-section{padding:5rem 2rem;max-width:1200px;margin:0 auto;scroll-margin-top:96px;position:relative}
+.work-section::before{content:"";position:absolute;left:50%;top:2rem;width:min(720px,80vw);height:260px;transform:translateX(-50%);background:radial-gradient(circle,rgba(124,58,237,.16),transparent 68%);filter:blur(22px);pointer-events:none;z-index:-1}
+.work-tabs{display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap;margin:-1rem 0 2.5rem}
+.work-pill{border:1px solid rgba(124,58,237,.28);background:rgba(124,58,237,.1);color:#c084fc;border-radius:999px;padding:.45rem .95rem;font-size:.78rem;font-weight:600;letter-spacing:.04em}
+.work-block{margin-top:2.2rem}
+.work-block-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1.25rem}
+.work-block-head h3{font-family:"Instrument Serif",serif;font-size:clamp(1.55rem,3vw,2.2rem);font-weight:400}
+.work-block-head p{color:var(--muted);font-size:.9rem;line-height:1.65;max-width:560px;text-align:right}
+.work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+.work-card{position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(168,85,247,.08),rgba(10,10,10,.96));border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:1.5rem;transition:all .3s;box-shadow:0 10px 35px rgba(0,0,0,.18)}
+.work-card::after{content:"";position:absolute;inset:auto -20% -45% -20%;height:160px;background:radial-gradient(circle,rgba(168,85,247,.18),transparent 65%);pointer-events:none}
+.work-card:hover{border-color:rgba(168,85,247,.55);transform:translateY(-5px);box-shadow:0 14px 45px rgba(124,58,237,.18)}
+.work-kicker{display:inline-flex;align-items:center;gap:.35rem;color:#a855f7;background:rgba(124,58,237,.14);border:1px solid rgba(124,58,237,.22);border-radius:999px;padding:.32rem .75rem;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem}
+.work-card h4{font-size:1.12rem;margin-bottom:.6rem;line-height:1.35}
+.work-card p{color:rgba(245,245,245,.68);font-size:.88rem;line-height:1.7;margin-bottom:1rem}
+.audio-shell{position:relative;z-index:2;margin-top:1rem;background:rgba(0,0,0,.42);border:1px solid rgba(168,85,247,.18);border-radius:14px;padding:.85rem}
+.audio-label{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.7rem;color:rgba(245,245,245,.82);font-size:.78rem;font-weight:600}
+.audio-label span:last-child{color:#a855f7;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
+audio{width:100%;height:40px;filter:invert(1) hue-rotate(225deg) saturate(1.2);opacity:.92}
+.site-preview{position:relative;z-index:1;overflow:hidden;border-radius:16px;border:1px solid rgba(168,85,247,.18);background:#050505;margin-bottom:1rem;min-height:205px}
+.site-preview::before{content:"";display:block;height:32px;background:linear-gradient(90deg,rgba(124,58,237,.28),rgba(168,85,247,.14));border-bottom:1px solid rgba(168,85,247,.12)}
+.browser-dots{position:absolute;top:12px;left:14px;display:flex;gap:6px;z-index:2}
+.browser-dots i{width:8px;height:8px;border-radius:50%;background:rgba(245,245,245,.45)}
+.site-preview img{display:block;width:100%;height:190px;object-fit:cover;object-position:top;opacity:.92;transition:transform .45s ease,opacity .3s ease;background:linear-gradient(135deg,rgba(124,58,237,.18),rgba(34,211,238,.1))}
+.work-card:hover .site-preview img{transform:scale(1.035);opacity:1}
+.site-fallback{display:none;position:absolute;inset:32px 0 0;align-items:center;justify-content:center;text-align:center;padding:1rem;color:#a855f7;font-family:"Instrument Serif",serif;font-size:1.6rem;background:radial-gradient(circle at 50% 30%,rgba(124,58,237,.24),transparent 65%),#050505}
+.site-preview img:broken + .site-fallback{display:flex}
+.site-meta{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1.1rem;position:relative;z-index:2}
+.site-link{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;text-decoration:none;border-radius:10px;padding:.72rem 1rem;font-size:.86rem;font-weight:700;box-shadow:0 0 22px rgba(124,58,237,.28);transition:all .25s;white-space:nowrap}
+.site-link:hover{transform:translateY(-2px);box-shadow:0 0 34px rgba(168,85,247,.45)}
+.work-note{color:var(--muted);font-size:.78rem;line-height:1.5}
+@media(max-width:768px){.work-section{padding:3.5rem 1.25rem}.work-grid{grid-template-columns:1fr}.work-block-head{display:block}.work-block-head p{text-align:left;margin-top:.6rem}.site-meta{flex-direction:column;align-items:flex-start}.site-link{width:100%}}
+
+.audio-backup{display:inline-flex;margin-top:.7rem;color:#c084fc;font-size:.8rem;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,132,252,.45);position:relative;z-index:2}
+.audio-backup:hover{color:#fff;border-color:#fff}
+.site-preview img{background:#080808}
+@media(max-width:480px){.work-section{padding:2.5rem .85rem}.work-card{padding:1.2rem}.site-preview{min-height:175px}.site-preview img{height:160px}.work-tabs{justify-content:flex-start}}
+
 /* REVIEWS */
 .reviews-section{padding:5rem 2rem;max-width:1200px;margin:0 auto}
 .reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
@@ -520,6 +561,7 @@ footer{border-top:1px solid var(--stroke);padding:4rem 2rem 2rem;background:radi
     <button class="nl" onclick="goHome()">Home</button>
     <button class="nl" onclick="openPage('about')">About Us</button>
     <button class="nl" onclick="openPage('services')">Services</button>
+    <a class="nl" href="#our-work" style="text-decoration:none">Our Work</a>
     <button class="nl" onclick="openPage('whyus')">Why Us</button>
     <button class="nl" onclick="openPage('faq')">FAQs</button>
     <a href="https://calendly.com/chaudharysohaib301/new-meeting" target="_blank" class="ncta">Book a Call</a>
@@ -534,6 +576,7 @@ footer{border-top:1px solid var(--stroke);padding:4rem 2rem 2rem;background:radi
   <button class="nl" onclick="goHome();closeMob()">Home</button>
   <button class="nl" onclick="openPage('about');closeMob()">About Us</button>
   <button class="nl" onclick="openPage('services');closeMob()">Services</button>
+  <a class="nl" href="#our-work" onclick="closeMob()" style="text-decoration:none">Our Work</a>
   <button class="nl" onclick="openPage('whyus');closeMob()">Why Us</button>
   <button class="nl" onclick="openPage('faq');closeMob()">FAQs</button>
   <a href="https://calendly.com/chaudharysohaib301/new-meeting" target="_blank" class="ncta" onclick="closeMob()">Book a Call</a>
@@ -557,6 +600,95 @@ footer{border-top:1px solid var(--stroke);padding:4rem 2rem 2rem;background:radi
   <!-- TICKER -->
   <section class="ticker-section">
     <div class="ticker-track" id="ticker"></div>
+  </section>
+
+
+
+  <!-- OUR WORK -->
+  <section class="work-section" id="our-work">
+    <p class="sec-sub" style="font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#a855f7;margin-bottom:.5rem">PORTFOLIO & LIVE DEMOS</p>
+    <h2 class="sec-title">Our Work</h2>
+    <p class="sec-sub">Listen to real AI voice agent demos and explore live website projects built for service-based businesses.</p>
+
+    <div class="work-tabs">
+      <span class="work-pill">🎧 Voice Agent Demos</span>
+      <span class="work-pill">🌐 Website Projects</span>
+      <span class="work-pill">⚡ Live Client-Style Builds</span>
+    </div>
+
+    <div class="work-block">
+      <div class="work-block-head">
+        <h3>AI Voice Agent Demos</h3>
+      </div>
+      <div class="work-grid">
+        <div class="work-card">
+          <div class="work-kicker">Automotive Voice Agent</div>
+          <h4>GoldChrust Automotive</h4>
+          <p>A polished voice agent demo for an automotive business, built to handle customer conversations with a smooth and professional tone.</p>
+          <div class="audio-shell">
+            <div class="audio-label"><span>GoldChrust Automotive Demo</span><span>Tap Play</span></div>
+            <audio controls preload="metadata" controlsList="nodownload" src="./ev1.wav">
+              <source src="./ev1.wav" type="audio/wav">
+              <source src="./ev1.wav" type="audio/x-wav">
+              Your browser does not support the audio player.
+            </audio>
+            <a class="audio-backup" href="./ev1.wav" target="_blank" rel="noopener noreferrer">Open audio in new tab</a>
+          </div>
+        </div>
+
+        <div class="work-card">
+          <div class="work-kicker">Outbound AI Agency Agent</div>
+          <h4>CallFlow AI</h4>
+          <p>An outbound AI voice agent demo for CallFlow AI, showing how the agent speaks with prospects on a real sales-style call and keeps the conversation natural, clear, and professional.</p>
+          <div class="audio-shell">
+            <div class="audio-label"><span>CallFlow AI Outbound Agent Demo</span><span>Tap Play</span></div>
+            <audio controls preload="metadata" controlsList="nodownload" src="./ev2.wav">
+              <source src="./ev2.wav" type="audio/wav">
+              <source src="./ev2.wav" type="audio/x-wav">
+              Your browser does not support the audio player.
+            </audio>
+            <a class="audio-backup" href="./ev2.wav" target="_blank" rel="noopener noreferrer">Open audio in new tab</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="work-block">
+      <div class="work-block-head">
+        <h3>Website Projects</h3>
+      </div>
+      <div class="work-grid">
+        <div class="work-card">
+          <div class="site-preview">
+            <div class="browser-dots"><i></i><i></i><i></i></div>
+            <img src="roof%20(1).png" alt="Peak Shield Roofing website preview" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="site-fallback">Peak Shield Roofing</div>
+          </div>
+          <div class="work-kicker">Roofing Website</div>
+          <h4>Peak Shield Roofing</h4>
+          <p>A professional roofing company website designed to build trust, explain services, and push visitors toward booking or contacting the business.</p>
+          <div class="site-meta">
+            <span class="work-note">Live Vercel project</span>
+            <a class="site-link" href="https://peaksheildroofing.vercel.app/" target="_blank" rel="noopener noreferrer">View Live Site →</a>
+          </div>
+        </div>
+
+        <div class="work-card">
+          <div class="site-preview">
+            <div class="browser-dots"><i></i><i></i><i></i></div>
+            <img src="dent.png" alt="Pearl Crest dental website preview" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="site-fallback">Pearl Crest Dental</div>
+          </div>
+          <div class="work-kicker">Dental Website</div>
+          <h4>Pearl Crest Dental</h4>
+          <p>A clean dental website concept with a premium look, clear service presentation, and easy navigation for patients.</p>
+          <div class="site-meta">
+            <span class="work-note">Live Vercel project</span>
+            <a class="site-link" href="https://pearlcrest.vercel.app/" target="_blank" rel="noopener noreferrer">View Live Site →</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- WHY US PREVIEW -->
@@ -630,6 +762,7 @@ footer{border-top:1px solid var(--stroke);padding:4rem 2rem 2rem;background:radi
           <li><a href="#home" onclick="event.preventDefault();goHome();">Home</a></li>
           <li><a href="#about" onclick="event.preventDefault();openPage('about');">About Us</a></li>
           <li><a href="#services" onclick="event.preventDefault();openPage('services');">Services</a></li>
+          <li><a href="#our-work">Our Work</a></li>
           <li><a href="#why-us" onclick="event.preventDefault();openPage('whyus');">Why Us</a></li>
           <li><a href="#faq" onclick="event.preventDefault();openPage('faq');">FAQ</a></li>
         </ul>
@@ -689,9 +822,9 @@ const stats=[
   {num:"5,000+",label:"Leads Called Per Campaign"},
   {num:"10x",label:"Faster Speed to Lead"},
   {num:"98%",label:"Call Pickup Rate"},
-  {num:"3x",label:"More Appointments Booked"},
+  {num:"10x",label:"More Appointments Booked"},
   {num:"$0",label:"Missed Revenue from After Hours"},
-  {num:"60s",label:"Average Response Time"},
+  {num:">3s",label:"Average Response Time"},
 ];
 const tk=document.getElementById("ticker");
 [...stats,...stats].forEach(s=>{
@@ -828,6 +961,9 @@ const faqs=[
   {q:"How realistic do your AI voice agents sound?",a:"Extremely realistic. Our agents use advanced neural voice technology trained on thousands of natural conversations. Most callers cannot tell they're speaking with an AI unless explicitly told. We customize the voice, tone, and script to match your brand."},
   {q:"How quickly can we go live?",a:"Most clients are live within 3–7 business days. After an onboarding call, we handle all the setup — scripting, integration, testing, and deployment. You don't need any technical knowledge."},
   {q:"Will the AI work with my existing tools?",a:"Yes. Our AI agents are built to integrate with anything — whatever CRM, calendar, or business tool you're already using. You don't need to change how you work; we plug right into it."},
+  {q:"Can NexVoice AI build websites too?",a:"Yes. Alongside AI voice agents, we build clean, mobile-friendly websites for service-based businesses. The goal is to make your business look professional, explain your offer clearly, and turn visitors into booked calls or leads."},
+  {q:"Can you connect an AI voice agent to my website?",a:"Yes. We can connect your website forms, booking links, CRM, and follow-up systems with AI voice agents so new leads can be contacted quickly and handled through a smoother automated workflow."},
+  {q:"Do I need technical knowledge to use the website or AI agent?",a:"No. We handle the setup, testing, and deployment for you. You just tell us your business goals, your preferred call flow, and the tools you use — we take care of the technical side."},
   {q:"What happens if a caller needs to speak with a real human?",a:"The AI recognizes escalation triggers — complex complaints, high-value inquiries, or direct requests for a person. It immediately transfers the call to your team or takes a message, depending on your preference."},
   {q:"Is my data safe and secure?",a:"Absolutely. All call data is encrypted in transit and at rest. Your client data is never shared or sold. You own all recordings and transcripts generated through our platform."},
 ];
