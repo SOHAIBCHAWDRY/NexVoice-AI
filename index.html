@@ -197,7 +197,8 @@ table.ct tbody td:first-child{color:var(--text);font-weight:500}
 /* OUR WORK */
 .work-section{padding:5rem 2rem;max-width:1200px;margin:0 auto;scroll-margin-top:96px;position:relative}
 .work-section::before{content:"";position:absolute;left:50%;top:2rem;width:min(720px,80vw);height:260px;transform:translateX(-50%);background:radial-gradient(circle,rgba(124,58,237,.16),transparent 68%);filter:blur(22px);pointer-events:none;z-index:-1}
-.work-tabs{display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap;margin:-1rem 0 2.5rem}
+.work-tabs{display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap;margin:-1rem 0 2.5rem}
+.work-tabs .work-pill{min-width:220px;text-align:center}
 .work-pill{border:1px solid rgba(124,58,237,.28);background:rgba(124,58,237,.1);color:#c084fc;border-radius:999px;padding:.45rem .95rem;font-size:.78rem;font-weight:600;letter-spacing:.04em}
 .work-block{margin-top:2.2rem}
 .work-block-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1.25rem}
@@ -231,7 +232,7 @@ audio{width:100%;height:40px;filter:invert(1) hue-rotate(225deg) saturate(1.2);o
 .audio-backup{display:inline-flex;margin-top:.7rem;color:#c084fc;font-size:.8rem;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,132,252,.45);position:relative;z-index:2}
 .audio-backup:hover{color:#fff;border-color:#fff}
 .site-preview img{background:#080808}
-@media(max-width:480px){.work-section{padding:2.5rem .85rem}.work-card{padding:1.2rem}.site-preview{min-height:175px}.site-preview img{height:160px}.work-tabs{justify-content:flex-start}}
+@media(max-width:480px){.work-section{padding:2.5rem .85rem}.work-card{padding:1.2rem}.site-preview{min-height:175px}.site-preview img{height:160px}.work-tabs{justify-content:center;gap:.7rem}.work-tabs .work-pill{width:100%;max-width:310px;min-width:0}}
 
 /* REVIEWS */
 .reviews-section{padding:5rem 2rem;max-width:1200px;margin:0 auto}
@@ -613,7 +614,6 @@ footer{border-top:1px solid var(--stroke);padding:4rem 2rem 2rem;background:radi
     <div class="work-tabs">
       <span class="work-pill">🎧 Voice Agent Demos</span>
       <span class="work-pill">🌐 Website Projects</span>
-      <span class="work-pill">⚡ Live Client-Style Builds</span>
     </div>
 
     <div class="work-block">
@@ -840,8 +840,8 @@ const reviews=[
   {name:"Sarah Mitchell",role:"CEO, BrightSmile Dental — California",stars:"★★★★★",text:"We never miss a call now, not even at 2am. It's like having a full-time staff member who never sleeps.",img:"https://i.pravatar.cc/150?img=5"},
   {name:"Derek Thompson",role:"Director, Thompson Law Group — New York",stars:"★★★★★",text:"Our conversion rate went up 3x. Competitors are still playing voicemail tag.",img:"https://i.pravatar.cc/150?img=8"},
   {name:"Amanda Reed",role:"Marketing Lead, FitLife Gyms — Florida",stars:"★★★★★",text:"The Meta Ads agent follows up on every Facebook lead instantly. ROI paid back in 2 weeks.",img:"https://i.pravatar.cc/150?img=47"},
-  {name:"Mike Sullivan",role:"Founder, CleanPro Services — Illinois",stars:"★★★★★",text:"Database reactivation brought back $18,000 in unpaid invoices we had written off. Absolutely unreal.",img:"https://i.pravatar.cc/150?img=12"},
-  {name:"Rachel Owens",role:"Ops Manager, Apex Roofing — Georgia",stars:"★★★★★",text:"Customers don't even realize they're talking to AI until we tell them. Incredible voice quality.",img:"https://i.pravatar.cc/150?img=48"},
+  {name:"Mike Sullivan",role:"Founder, CleanPro Services — Illinois",stars:"★★★★★",text:"NexVoice AI rebuilt our website with a cleaner layout, stronger calls-to-action, and a smoother mobile experience. It instantly looked more professional.",img:"https://i.pravatar.cc/150?img=12"},
+  {name:"Rachel Owens",role:"Ops Manager, Apex Roofing — Georgia",stars:"★★★★★",text:"The website they built made our services much easier to understand and gave visitors a clear path to request a quote. Simple, fast, and conversion-focused.",img:"https://i.pravatar.cc/150?img=48"},
 ];
 const rg=document.getElementById("rg");
 reviews.forEach(r=>{
